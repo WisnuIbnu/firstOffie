@@ -1,4 +1,4 @@
-# 🏢 Office Rent API – Laravel Project
+# 🏢 Office Rent API – Keamanan Jaringan (Tugas Akhir)
 
 Sistem API berbasis Laravel untuk penyewaan ruang kantor. Proyek ini menyediakan berbagai endpoint RESTful untuk pengelolaan gedung, ruang kantor, penyewa, pemesanan, dan pembayaran, serta admin panel menggunakan **Filament**.
 
