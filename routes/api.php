@@ -11,7 +11,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 
-Route::middleware('api_key')->group(function() {
+Route::middleware('api_key', 'throttle:1,1')->group(function() {
 
     Route::get('/office/{officeSpace:slug}', [OfficeSpaceController::class, 'show']);
     Route::apiResource('/offices', OfficeSpaceController::class);
@@ -24,3 +24,5 @@ Route::middleware('api_key')->group(function() {
     Route::post('/check-booking',[BookingTransactionController::class,'booking_details']);
 
 });
+
+

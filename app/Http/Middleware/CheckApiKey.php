@@ -19,7 +19,10 @@ class CheckApiKey
         $apiKey = $request->header('X-API-KEY');
 
         if (!$apiKey || !ApiKey::where('key', $apiKey)->exists()) {
-            return response()->json(['message' => 'Unauthorized'], 401);
+            return response()->json([
+                'message' => 'API KEY Anda Salah',
+                'status' => 'failed'
+            ], 401);
         }
 
         return $next($request);
